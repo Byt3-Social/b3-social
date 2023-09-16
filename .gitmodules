@@ -4,3 +4,6 @@
 [submodule "api-gateway"]
 	path = api-gateway
 	url = https://github.com/Byt3-Social/api-gateway.git
+[submodule "authentication"]
+	path = authentication
+	url = https://github.com/Byt3-Social/authentication.git
