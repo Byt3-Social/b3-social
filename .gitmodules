@@ -1,0 +1,6 @@
+[submodule "service-discovery"]
+	path = service-discovery
+	url = https://github.com/Byt3-Social/service-discovery.git
+[submodule "api-gateway"]
+	path = api-gateway
+	url = https://github.com/Byt3-Social/api-gateway.git
