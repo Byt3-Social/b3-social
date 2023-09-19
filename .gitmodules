@@ -7,3 +7,6 @@
 [submodule "authentication"]
 	path = authentication
 	url = https://github.com/Byt3-Social/authentication.git
+[submodule "prospeccao"]
+	path = prospeccao
+	url = https://github.com/Byt3-Social/prospeccao.git
