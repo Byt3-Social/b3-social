@@ -10,3 +10,6 @@
 [submodule "prospeccao"]
 	path = prospeccao
 	url = https://github.com/Byt3-Social/prospeccao.git
+[submodule "analise-documental"]
+	path = analise-documental
+	url = https://github.com/Byt3-Social/analise-documental.git
