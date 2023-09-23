@@ -1,0 +1,89 @@
+version: '2.22'
+services:
+  service-discovery:
+    container_name: service-discovery
+    build:
+      context: service-discovery
+      dockerfile: Dockerfile
+    image: service-discovery:latest
+    depends_on:
+      - mysql
+    ports:
+      - 8761:8761
+    networks:
+      - b3-social-network
+    env_file:
+      - .env
+  api-gateway:
+    container_name: api-gateway
+    build:
+      context: api-gateway
+      dockerfile: Dockerfile
+    image: api-gateway:latest
+    depends_on:
+      - mysql
+      - service-discovery
+    restart: on-failure
+    ports:
+      - 8080:8080
+    networks:
+      - b3-social-network
+    env_file:
+      - .env
+  analise-documental:
+    container_name: analise-documental
+    build:
+      context: analise-documental
+      dockerfile: Dockerfile
+    image: analise-documental:latest
+    depends_on:
+      - api-gateway
+    restart: on-failure
+    networks:
+      - b3-social-network
+    env_file:
+      - .env
+  authentication:
+    container_name: authentication
+    build:
+      context: authentication
+      dockerfile: Dockerfile
+    image: authentication:latest
+    depends_on:
+      - api-gateway
+    restart: on-failure
+    networks:
+      - b3-social-network
+    env_file:
+      - .env
+  prospeccao:
+    container_name: prospeccao
+    build:
+      context: prospeccao
+      dockerfile: Dockerfile
+    image: prospeccao:latest
+    depends_on:
+      - api-gateway
+    restart: on-failure
+    networks:
+      - b3-social-network
+    env_file:
+      - .env
+  mysql:
+    image: "mysql:8.0"
+    ports:
+      - 3306:3306
+    expose:
+      - 3306
+    volumes:
+      - ./init.sql:/docker-entrypoint-initdb.d/init.sql
+    networks:
+      - b3-social-network
+    environment:
+      MYSQL_DATABASE: b3_social
+      MYSQL_ALLOW_EMPTY_PASSWORD: true
+      MYSQL_USER: leandro
+      MYSQL_PASSWORD: leandro
+      MYSQL_ROOT_PASSWORD:
+networks:
+  b3-social-network:
