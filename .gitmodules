@@ -13,3 +13,6 @@
 [submodule "analise-documental"]
 	path = analise-documental
 	url = https://github.com/Byt3-Social/analise-documental.git
+[submodule "acoes-sociais"]
+	path = acoes-sociais
+	url = https://github.com/Byt3-Social/acoes-sociais.git
