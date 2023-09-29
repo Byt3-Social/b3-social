@@ -70,6 +70,19 @@ services:
       - b3-social-network
     env_file:
       - .env
+  acoes-sociais:
+    container_name: acoes-sociais
+    build:
+      context: acoes-sociais
+      dockerfile: Dockerfile
+    image: acoes-sociais:latest
+    depends_on:
+      - api-gateway
+    restart: on-failure
+    networks:
+      - b3-social-network
+    env_file:
+      - .env
   mysql:
     image: "mysql:8.0"
     ports:
