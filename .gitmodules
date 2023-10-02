@@ -19,3 +19,6 @@
 [submodule "front-end"]
 	path = front-end
 	url = https://github.com/Byt3-Social/front-end.git
+[submodule "acompanhamento"]
+	path = acompanhamento
+	url = https://github.com/Byt3-Social/acompanhamento.git
