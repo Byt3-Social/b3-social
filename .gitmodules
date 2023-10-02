@@ -16,3 +16,6 @@
 [submodule "acoes-sociais"]
 	path = acoes-sociais
 	url = https://github.com/Byt3-Social/acoes-sociais.git
+[submodule "front-end"]
+	path = front-end
+	url = https://github.com/Byt3-Social/front-end.git
