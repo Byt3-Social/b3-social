@@ -1,11 +1,11 @@
-version: '2.22'
+version: '3'
 services:
   service-discovery:
     container_name: service-discovery
     build:
       context: service-discovery
       dockerfile: Dockerfile
-    image: service-discovery:latest
+    image: byt3social/service-discovery:latest
     depends_on:
       - mysql
       - rabbitmq
@@ -20,13 +20,13 @@ services:
     build:
       context: api-gateway
       dockerfile: Dockerfile
-    image: api-gateway:latest
+    image: byt3social/api-gateway:latest
     depends_on:
       - mysql
       - service-discovery
     restart: on-failure
     ports:
-      - 8080:8080
+      - 8081:8081
     networks:
       - b3-social-network
     env_file:
@@ -36,7 +36,7 @@ services:
     build:
       context: analise-documental
       dockerfile: Dockerfile
-    image: analise-documental:latest
+    image: byt3social/analise-documental:latest
     depends_on:
       - api-gateway
     restart: on-failure
@@ -49,7 +49,7 @@ services:
     build:
       context: authentication
       dockerfile: Dockerfile
-    image: authentication:latest
+    image: byt3social/authentication:latest
     depends_on:
       - api-gateway
     restart: on-failure
@@ -62,7 +62,7 @@ services:
     build:
       context: prospeccao
       dockerfile: Dockerfile
-    image: prospeccao:latest
+    image: byt3social/prospeccao:latest
     depends_on:
       - api-gateway
     restart: on-failure
@@ -75,7 +75,7 @@ services:
     build:
       context: acoes-sociais
       dockerfile: Dockerfile
-    image: acoes-sociais:latest
+    image: byt3social/acoes-sociais:latest
     depends_on:
       - api-gateway
     restart: on-failure
@@ -83,6 +83,39 @@ services:
       - b3-social-network
     env_file:
       - .env
+  acompanhamento:
+    container_name: acompanhamento
+    build:
+      context: acompanhamento
+      dockerfile: Dockerfile
+    image: byt3social/acompanhamento:latest
+    depends_on:
+      - api-gateway
+    restart: on-failure
+    networks:
+      - b3-social-network
+    env_file:
+      - .env
+  front-end:
+    container_name: front-end
+    build:
+      context: front-end
+      dockerfile: Dockerfile
+    image: byt3social/front-end:latest
+    depends_on:
+      - mysql
+      - rabbitmq
+      - service-discovery
+      - api-gateway
+      - authentication
+      - prospeccao
+      - analise-documental
+      - acoes-sociais
+      - acompanhamento
+    ports:
+      - 80:80
+    networks:
+      - b3-social-network
   mysql:
     image: "mysql:8.0"
     ports:
@@ -102,7 +135,7 @@ services:
   rabbitmq:
     image: rabbitmq:3.12-management
     container_name: rabbitmq
-    restart: always
+    restart: on-failure
     ports:
       - 5672:5672
       - 15672:15672
@@ -111,7 +144,7 @@ services:
     networks:
       - b3-social-network
     environment:
-      - RABBITMQ_DEFAULT_USER=
-      - RABBITMQ_DEFAULT_PASS=
+      - RABBITMQ_DEFAULT_USER=guest
+      - RABBITMQ_DEFAULT_PASS=guest
 networks:
   b3-social-network:
