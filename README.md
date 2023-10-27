@@ -10,9 +10,9 @@ Este projeto foi desenvolvido pelos seguintes membros:
 
 [<img align="center" src="https://img.shields.io/badge/linkedin-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white"> Leandro Pereira](https://www.linkedin.com/in/leojgpereira/)
 
-[<img align="center" src="https://img.shields.io/badge/linkedin-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white"> Roney Miranda](https://www.linkedin.com/in/roney-miranda-263494229/)
-
 [<img align="center" src="https://img.shields.io/badge/linkedin-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white"> Lucas Carvalho](https://www.linkedin.com/in/lucasweltersoft/)
+
+[<img align="center" src="https://img.shields.io/badge/linkedin-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white"> Roney Miranda](https://www.linkedin.com/in/roney-miranda-263494229/)
 
 Além disso, contamos com a mentoria dos seguintes colaboradores da B3:
 
