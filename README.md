@@ -6,13 +6,13 @@ Os submódulos desse repositório referenciam os repositórios que contém os c�
 ## Equipe
 Este projeto foi desenvolvido pelos seguintes membros:
 
+[<img align="center" src="https://img.shields.io/badge/linkedin-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white"> Fernanda Mascarenhas](https://www.linkedin.com/in/fernanda-mascarenhas-21a561277/)
+
 [<img align="center" src="https://img.shields.io/badge/linkedin-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white"> Leandro Pereira](https://www.linkedin.com/in/leojgpereira/)
 
 [<img align="center" src="https://img.shields.io/badge/linkedin-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white"> Roney Miranda](https://www.linkedin.com/in/roney-miranda-263494229/)
 
 [<img align="center" src="https://img.shields.io/badge/linkedin-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white"> Lucas Carvalho](https://www.linkedin.com/in/lucasweltersoft/)
-
-[<img align="center" src="https://img.shields.io/badge/linkedin-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white"> Fernanda Mascarenhas](https://www.linkedin.com/in/fernanda-mascarenhas-21a561277/)
 
 Além disso, contamos com a mentoria dos seguintes colaboradores da B3:
 
@@ -21,7 +21,7 @@ Além disso, contamos com a mentoria dos seguintes colaboradores da B3:
 * Giovanni Bertotti
 * Bruno Simão
 
-Agredecemos também a Marcelly Guerrero pelo auxilio no levantamento de requisitos do sistema.
+Agredecemos também a Marcelly Guerrero pelo auxílio no levantamento de requisitos do sistema.
 
 ## Desafio proposto
 O desafio proposto consiste no desenvolvimento de um sistema especializado que permita o cadastro de ações socias e divulgação das mesmas para os colaboradores internos da B3.
