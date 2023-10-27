@@ -1,6 +1,5 @@
 # Byt3 Social | O jeito B3
 
----
 
 Os submódulos desse repositório referenciam os repositórios que contém os códigos desenvolvidos para cada microsserviço do sistema construido
 
@@ -15,7 +14,7 @@ Este projeto foi desenvolvido pelos seguintes membros:
 
 [<img align="center" src="https://img.shields.io/badge/linkedin-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white"> Fernanda Mascarenhas](https://www.linkedin.com/in/fernanda-mascarenhas-21a561277/)
 
-Além disso, contou com a mentoria dos seguintes colaboradores da B3:
+Além disso, contamos com a mentoria dos seguintes colaboradores da B3:
 
 * Anita Nascimento (Mentora)
 * Cristiano Mariano
@@ -40,6 +39,8 @@ Com base no levantamento de requisitos e levando em consideração o desafio pro
   * Flyway - Migrations
   * Eureka Server - Serviço de descoberta
   * SpringDoc
+  * JUnit
+  * Mockito
   * Docker - [Imagens disponíveis no Docker Hub](https://hub.docker.com/search?q=byt3social)
 
 
@@ -58,6 +59,15 @@ Aqui disponibilizamos links referente aos documentos elaborados durante a concep
 * [Modelo de negócio - Ações de ISP](https://drive.google.com/file/d/1orhJsUzuWRVOb9LldblFZRq3nCk2MFo6/view?usp=sharing)
 * [Modelo Conceitual](https://drive.google.com/file/d/1xH8tK8zj2h4isc6YS0OHGAEi-MoZZGpi/view?usp=sharing)
 * [Arquitetura do sistema](https://drive.google.com/file/d/1Mmmt9KmcfkdHglbHsJZJYONfejSI0tHe/view?usp=sharing)
+* [Diagrama do Banco de Dados - Serviço de Autenticação](https://drive.google.com/file/d/1ymwZ4x9PMoopXdNOl1szO4gfBZ-pc-JP/view?usp=sharing)
+* [Diagrama do Banco de Dados - Serviço de Prospecção](https://drive.google.com/file/d/1h786erKZPgQxxLUq6N8vdHamlu3cURGM/view?usp=sharing)
+* [Diagrama do Banco de Dados - Serviço de Análise Documental](https://drive.google.com/file/d/1nwuuSPNBmCYv3UHgWlwKtKSe9x0OZvBe/view?usp=sharing)
+* [Diagrama do Banco de Dados - Serviço de Ações Sociais (Voluntariado)](https://drive.google.com/file/d/1RNJvV6LpMiM5VR_ZHeMW3TYrm-WJXr-D/view?usp=sharing)
+* [Diagrama do Banco de Dados - Serviço de Ações Sociais (ISP)](https://drive.google.com/file/d/1YKmRX9rISPNKJZJliETXG3UOtt_4mi9z/view?usp=sharing)
+* [Diagrama do Banco de Dados - Serviço de Acompanhamento](https://drive.google.com/file/d/1HP-l6Zspt93V_fGeLgb8oWMybmk7hfHn/view?usp=sharing)
+* [Wireframes](https://www.figma.com/file/MLfuNrztbOHLjjxIjpMWYO/Byt3-Social-%7C-UI?type=design&node-id=0%3A1&mode=dev)
+
+[Acesse aqui](https://drive.google.com/drive/folders/1ixgp93H1onc8CD-NUCNa0-bjdkmkAufq?usp=sharing) uma pasta no Google Drive com todos os artefatos desenvolvidos pela nossa equipe durante a construção desse sistema, ou se preferir, acesse um documento específico nos links citados acima.
 
 ## Integrações
 * Microsoft Entra ID (Azure Active Directory) - Autenticação
@@ -65,3 +75,4 @@ Aqui disponibilizamos links referente aos documentos elaborados durante a concep
 * PDSign - Assinatura digital de documentos
 * PagSeguro - Processamento de doações
 * Microsoft Teams - Agendamento de reuniões
+* VLibras (Acessibilidade)
