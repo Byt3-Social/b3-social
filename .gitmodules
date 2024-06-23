@@ -22,3 +22,6 @@
 [submodule "acompanhamento"]
 	path = acompanhamento
 	url = https://github.com/Byt3-Social/acompanhamento.git
+[submodule "logging"]
+	path = logging
+	url = https://github.com/Byt3-Social/logging.git
