@@ -1,6 +1,7 @@
 version: '3'
 services:
   service-discovery:
+    platform: linux/amd64
     container_name: service-discovery
     build:
       context: service-discovery
@@ -16,6 +17,7 @@ services:
     env_file:
       - .env
   api-gateway:
+    platform: linux/amd64
     container_name: api-gateway
     build:
       context: api-gateway
@@ -32,6 +34,7 @@ services:
     env_file:
       - .env
   analise-documental:
+    platform: linux/amd64
     container_name: analise-documental
     build:
       context: analise-documental
@@ -45,6 +48,7 @@ services:
     env_file:
       - .env
   authentication:
+    platform: linux/amd64
     container_name: authentication
     build:
       context: authentication
@@ -58,6 +62,7 @@ services:
     env_file:
       - .env
   prospeccao:
+    platform: linux/amd64
     container_name: prospeccao
     build:
       context: prospeccao
@@ -71,6 +76,7 @@ services:
     env_file:
       - .env
   acoes-sociais:
+    platform: linux/amd64
     container_name: acoes-sociais
     build:
       context: acoes-sociais
@@ -84,6 +90,7 @@ services:
     env_file:
       - .env
   acompanhamento:
+    platform: linux/amd64
     container_name: acompanhamento
     build:
       context: acompanhamento
@@ -96,7 +103,22 @@ services:
       - b3-social-network
     env_file:
       - .env
+  logging:
+    platform: linux/amd64
+    container_name: logging
+    build:
+      context: logging
+      dockerfile: Dockerfile
+    image: byt3social/logging:latest
+    depends_on:
+      - api-gateway
+    restart: on-failure
+    networks:
+      - b3-social-network
+    env_file:
+      - .env
   front-end:
+    platform: linux/amd64
     container_name: front-end
     build:
       context: front-end
@@ -112,10 +134,13 @@ services:
       - analise-documental
       - acoes-sociais
       - acompanhamento
+      - logging
     ports:
       - 80:80
     networks:
       - b3-social-network
+    env_file:
+      - .env
   mysql:
     image: "mysql:8.0"
     ports:
